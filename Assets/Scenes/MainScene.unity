@@ -1610,6 +1610,7 @@ MonoBehaviour:
   endPanel: {fileID: 1083699963}
   thisScoreTxt: {fileID: 1462430383}
   maxScoreTxt: {fileID: 1502855982}
+  anim: {fileID: 367546939}
 --- !u!4 &1741174593
 Transform:
   m_ObjectHideFlags: 0
