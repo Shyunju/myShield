@@ -1595,6 +1595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   square: {fileID: 2164168767721434194, guid: 71a54f6ed2353a145ad35f484426aa45, type: 3}
   timeTxt: {fileID: 1641577911}
+  endPanel: {fileID: 1083699963}
 --- !u!4 &1741174593
 Transform:
   m_ObjectHideFlags: 0
