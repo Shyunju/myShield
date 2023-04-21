@@ -13,6 +13,7 @@ public class gameManager : MonoBehaviour
     public GameObject endPanel;
     public Text thisScoreTxt;
     bool isRunning = true;
+    public Text maxScoreTxt;
 
 
     private void Awake()
@@ -48,6 +49,20 @@ public class gameManager : MonoBehaviour
         Time.timeScale = 0.0f;
         thisScoreTxt.text = alive.ToString("N2");
         endPanel.SetActive(true);
+
+        if (PlayerPrefs.HasKey("bestscore") == false)
+        {
+            PlayerPrefs.SetFloat("bestscore", alive);
+        }
+        else
+        {
+            if(alive > PlayerPrefs.GetFloat("bestscore"))
+            {
+                PlayerPrefs.SetFloat("bestscore", alive);
+            }
+        }
+        float maxScore = PlayerPrefs.GetFloat("bestscore");
+        maxScoreTxt.text = maxScore.ToString("N2");
     }
 
     public void retry()
