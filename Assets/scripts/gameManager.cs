@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -21,7 +22,9 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
         InvokeRepeating("makeSquare", 0.0f, 0.5f);
+        
     }
 
     // Update is called once per frame
@@ -45,6 +48,11 @@ public class gameManager : MonoBehaviour
         Time.timeScale = 0.0f;
         thisScoreTxt.text = alive.ToString("N2");
         endPanel.SetActive(true);
+    }
+
+    public void retry()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }
 
