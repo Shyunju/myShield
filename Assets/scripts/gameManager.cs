@@ -10,6 +10,8 @@ public class gameManager : MonoBehaviour
     public Text timeTxt;
     float alive = 0f;
     public GameObject endPanel;
+    public Text thisScoreTxt;
+
 
     private void Awake()
     {
@@ -35,6 +37,7 @@ public class gameManager : MonoBehaviour
     public void gameOver()
     {
         Time.timeScale = 0.0f;
+        thisScoreTxt.text = alive.ToString("N2");
         endPanel.SetActive(true);
     }
 }
